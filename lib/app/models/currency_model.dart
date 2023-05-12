@@ -1,3 +1,6 @@
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
+
 class CurrencyModel {
   final String? name = "";
   final double? real = 0.0;
@@ -24,5 +27,14 @@ class CurrencyModel {
           euro: 9689.34,
           bitcoin: 1.0),
     ];
+  }
+}
+
+class Jsoin extends StatelessWidget {
+  const Jsoin({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
