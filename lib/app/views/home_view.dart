@@ -7,21 +7,53 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SizedBox(
-        child: Column(
-          children: [
-            Image.network(
-                'https://img.freepik.com/vetores-gratis/pessoas-trocando-bitcoin-por-dolares_53876-43042.jpg?w=1380&t=st=1683826659~exp=1683827259~hmac=ef4b933df6858b5d35641f61375f5ced39f2270a06ef7fcbae98a52856f3b167'),
-            Row(
-              children: [
-                DropdownButton(items: [], onChanged: (Value) {}),
-                TextField(),
-              ],
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('CONVERTER'),
-            ),
-          ],
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 100),
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/images/convesorLogo.png',
+                width: 200,
+                height: 200,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: DropdownButton(
+                        items: [
+                          DropdownMenuItem(
+                            child: Text('Dolar'),
+                          ),
+                        ],
+                        onChanged: (Value) {},
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    const Expanded(
+                      flex: 2,
+                      child: TextField(
+                        decoration: InputDecoration(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('CONVERTER'),
+              ),
+            ],
+          ),
         ),
       ),
     );

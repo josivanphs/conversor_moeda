@@ -29,12 +29,3 @@ class CurrencyModel {
     ];
   }
 }
-
-class Jsoin extends StatelessWidget {
-  const Jsoin({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
